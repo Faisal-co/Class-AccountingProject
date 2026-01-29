@@ -1,1 +1,0 @@
-This is index.php of Class Accounting Project.
