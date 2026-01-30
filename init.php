@@ -20,5 +20,6 @@ $stopwatch->start('anyName');
 $log->info('hello');
 $event = $stopwatch->stop('anyName');
 // echo $event;
+/* var symfony var-dumper 
 $a = [4411111111111113,2,4,5,8];
-dd($a);  
+dump($a); */ 
