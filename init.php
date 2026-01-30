@@ -14,9 +14,11 @@ $dotenv->load();
 $log = new Logger('TechAgency');
 $log->pushHandler(new StreamHandler(__DIR__.'/logs/app.log', Level::Info));
 $log->info(message: 'app:start');
-// pint Package command to run CMD (php vendor/bin/pint).
-$stopwatch = new Stopwatch();
+// pint Package command to run CMD (php vendor/bin/pint but if this already add to composer then just composer run pint in cmd).
+$stopwatch = new Stopwatch;
 $stopwatch->start('anyName');
 $log->info('hello');
 $event = $stopwatch->stop('anyName');
-echo $event;
+// echo $event;
+$a = [4411111111111113,2,4,5,8];
+dd($a);  
