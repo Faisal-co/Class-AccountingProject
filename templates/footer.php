@@ -1,15 +1,18 @@
 <!--begin::Footer-->
+<?php 
+if(is_auth_page() == false){?>
 <footer class="app-footer">
   <!--begin::To the end-->
   <!--end::To the end-->
   <!--begin::Copyright-->
   <strong>
-    Copyright &copy; 2014-2025&nbsp;
-    <a href="https://adminlte.io" class="text-decoration-none">AdminLTE.io</a>.
+    Copyright &copy; <?php echo date('Y'); ?>
+    <a href="<?php echo $_ENV['APP_URL']; ?>" class="text-decoration-none"><?php echo $_ENV['APP_NAME']; ?></a>.
   </strong>
   All rights reserved.
   <!--end::Copyright-->
 </footer>
+<?php } ?>
 <!--end::Footer-->
 <!--begin::Script-->
 <!--begin::Third Party Plugin(OverlayScrollbars)-->
@@ -30,6 +33,6 @@
 
 <!--end::OverlayScrollbars Configure-->
 <!--end::Script-->
-</body>
-</html>
+
+
 

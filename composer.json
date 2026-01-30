@@ -11,5 +11,10 @@
     "scripts": { 
         "pint": "php vendor/bin/pint"
 
+    },
+    "autoload": {
+        "files":[
+            "functions.php"
+        ]
     }
 }

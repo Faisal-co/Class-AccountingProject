@@ -6,7 +6,7 @@ use Monolog\Handler\StreamHandler;
 use Monolog\Level;
 use Monolog\Logger;
 use Symfony\Component\Stopwatch\Stopwatch;
-
+// require_once __DIR__.'/functions.php';
 // dotenv package
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -22,4 +22,4 @@ $event = $stopwatch->stop('anyName');
 // echo $event;
 /* var symfony var-dumper 
 $a = [4411111111111113,2,4,5,8];
-dump($a); */ 
+dd($a); */ 

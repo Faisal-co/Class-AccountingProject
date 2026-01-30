@@ -3,7 +3,7 @@
   <!--begin::Head-->
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>AdminLTE 4 | Fixed Sidebar</title>
+    <title>Dashboard | <?php echo $_ENV['APP_NAME']; ?></title>
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
@@ -21,9 +21,7 @@
       name="keywords"
       content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard, bootstrap 5 charts, bootstrap 5 calendar, bootstrap 5 datepicker, bootstrap 5 tables, bootstrap 5 datatable, vanilla js datatable, colorlibhq, colorlibhq dashboard, colorlibhq admin dashboard, accessible admin panel, WCAG compliant"
     />
-    <!--end::Primary Meta Tags-->
-    <!--begin::Accessibility Features-->
-    <!-- Skip links will be dynamically added by accessibility.js -->
+
     <meta name="supported-color-schemes" content="light dark" />
     <link rel="preload" href="../css/adminlte.css" as="style" />
     <!--end::Accessibility Features-->
@@ -54,6 +52,19 @@
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href="assets/css/adminlte.min.css" />
     <!--end::Required Plugin(AdminLTE)-->
+  </head>
+  <?php 
+  if (is_auth_page()){
+$classes = 'register-page bg-body-secondary';
+  }
+  else{
+$classes = 'layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary';
+  }
+  ?>
+   <body class="<?php echo $classes ?>">
+    <?php if(is_auth_page() == false){ ?>
+    <div class="app-wrapper">
+      <!--begin::Header-->
     <nav class="app-header navbar navbar-expand bg-body">
         <!--begin::Container-->
         <div class="container-fluid">
@@ -64,24 +75,8 @@
                 <i class="bi bi-list"></i>
               </a>
             </li>
-          
           </ul>
-          <!--end::Start Navbar Links-->
-          <!--begin::End Navbar Links-->
           <ul class="navbar-nav ms-auto">
-            <!--begin::Navbar Search-->
-            
-            <!--end::Navbar Search-->
-            <!--begin::Messages Dropdown Menu-->
-            
-            <!--end::Messages Dropdown Menu-->
-            <!--begin::Notifications Dropdown Menu-->
-           
-            <!--end::Notifications Dropdown Menu-->
-            <!--begin::Fullscreen Toggle-->
-            
-            <!--end::Fullscreen Toggle-->
-            <!--begin::User Menu Dropdown-->
             <li class="nav-item dropdown user-menu">
               <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                 <img
@@ -104,27 +99,20 @@
                     <small>Member since Nov. 2023</small>
                   </p>
                 </li>
-                <!--end::User Image-->
-                <!--begin::Menu Body-->
-               
-                <!--end::Menu Body-->
-                <!--begin::Menu Footer-->
                 <li class="user-footer">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                   <a href="#" class="btn btn-default btn-flat float-end">Sign out</a>
                 </li>
-                <!--end::Menu Footer-->
               </ul>
             </li>
-            <!--end::User Menu Dropdown-->
           </ul>
-          <!--end::End Navbar Links-->
-        </div>
-        <!--end::Container-->
+</div>
       </nav>
-      <!--end::Header-->
-      
-  </head>
+    <?php } ?>
+    
 
-  <!--end::Head-->
+
+
+
+
   

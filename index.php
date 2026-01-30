@@ -1,15 +1,16 @@
-<?php require_once __DIR__ . '/templates/header.php'; ?>
+<?php 
+require_once __DIR__ . '/init.php';
+get_header(); 
+get_aside(); 
+
+?>
 
 <!--begin::Body-->
-<body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary">
-    <!--begin::App Wrapper-->
 
-    <div class="app-wrapper">
         <!--begin::Header-->
-
-<?php require_once __DIR__ . '/templates/aside.php'; ?>
-
         <!--begin::App Main-->
+   <body class="layout-fixed sidebar-expand-lg sidebar-open bg-body-tertiary | register-page bg-body-secondary">
+    
         <main class="app-main">
             <!--begin::App Content Header-->
             <div class="app-content-header">
@@ -44,8 +45,10 @@
 
             <!--end::App Content-->
         </main>
+        </div>
         <!--end::App Main-->
-<?php require_once __DIR__ . '/templates/footer.php'; ?>
+<?php get_footer(); ?>
+    
 
     <!--end::App Wrapper-->
 

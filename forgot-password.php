@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 require_once __DIR__ . '/init.php';
 get_header(); 
 
@@ -15,7 +14,7 @@ get_header();
                 </a>
             </div>
             <div class="card-body register-card-body">
-                <p class="register-box-msg">Login</p>
+                <p class="register-box-msg">Forgot Password</p>
                 <form action="../index3.html" method="post">
                     <div class="input-group mb-1">
                         <div class="form-floating">
@@ -60,14 +59,10 @@ get_header();
                 </form>
                 
                 <!-- /.social-auth-links -->
-                   <p class="mb-1">
-        <a href="forgot-password.php">I forgot my Password</a>
-      </p>
-      <p class="mb-0">
-        <a href="register.php" class="text-center">Register a new Account</a>
-      </p>
+                <p class="mb-0">
+                    <a href="login.html" class="link-primary text-center"> I already have a membership </a>
+                </p>
             </div>
-         
             <!-- /.register-card-body -->
         </div>
     </div>
